@@ -1,21 +1,32 @@
-//
-//  ContentView.swift
-//  iExpense
-//
-//  Created by Brayan Duwe on 04/04/26.
-//
-
 import SwiftUI
 
-struct ContentView: View {
+struct SecondView: View {
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        Text("Second View")
+            .toolbar{
+                ToolbarItem(placement: .topBarLeading) {
+                    Button("Dismiss", systemImage: "chevron.backward"){
+                        dismiss()
+                    }
+                }
+            }
+    }
+}
+
+struct ContentView: View {
+    @State private var showingSheet = false
+    
+    var body: some View {
+        Button("Show Second View") {
+            showingSheet.toggle()
         }
-        .padding()
+        .sheet(isPresented: $showingSheet) {
+            NavigationStack {
+                SecondView()
+            }
+        }
     }
 }
 
