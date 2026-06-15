@@ -18,4 +18,6 @@ This is a simple way to record all your expenses. Add and categorize your expens
 ## Preview
 
 ![Image](https://github.com/user-attachments/assets/476a5e54-81a9-4f61-8ecb-e6ccf5df7322)
+<br>
+<br>
 <img width="382" height="262" alt="Image" src="https://github.com/user-attachments/assets/c0eb34ad-4ddf-45f0-95b8-7718645a4d72" />
